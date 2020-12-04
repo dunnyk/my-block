@@ -110,7 +110,7 @@ class CommentAdmin(admin.ModelAdmin):
   
 admin.site.register(Post, PostAdmin)
 
-@admin.register(Comment)
+@admin.register(Comment) # Registering comment model to admin dashboard
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')
