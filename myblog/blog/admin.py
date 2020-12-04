@@ -66,8 +66,8 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(active=True)
 
 
-@admin.register(Image)
-@admin.register(Comment)
+@admin.register(Image) # THis is a one point command that helps to pull the image
+@admin.register(Comment) # into this and without writing a lot of code helping to bypass to end.
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')
